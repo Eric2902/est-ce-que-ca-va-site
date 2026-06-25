@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Est-ce que ça va ?</title>
+<style>
+  :root {
+    --sky: #5b8a9e; --sky-deep: #3d6577; --sun: #e8a04b;
+    --cream: #faf6ef; --ink: #2b3338; --ink-soft: #5a666d;
+    --card: #ffffff; --line: #e4ddd1; --radius: 18px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink); background: var(--cream); line-height: 1.7; font-size: 18px;
+  }
+  .lang-en { display: none; }
+  body.en .lang-fr { display: none; }
+  body.en .lang-en { display: inline; }
+  body.en .lang-en.block { display: block; }
+
+  header {
+    background: rgba(250, 246, 239, 0.92); border-bottom: 1px solid var(--line);
+    padding: 14px 24px; display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 10px; position: sticky; top: 0; z-index: 10;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; color: var(--sky-deep); text-decoration: none; }
+  .brand .app-icon { width: 36px; height: 36px; border-radius: 9px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(10,21,32,0.25); }
+  .brand .app-icon svg { display: block; }
+  .lang-toggle { display: flex; border: 2px solid var(--sky); border-radius: 999px; overflow: hidden; }
+  .lang-toggle button { border: none; background: transparent; color: var(--sky-deep); padding: 6px 16px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .lang-toggle button.active { background: var(--sky); color: white; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-size: 32px; color: var(--sky-deep); margin-bottom: 8px; line-height: 1.2; }
+  .dates { color: var(--ink-soft); font-size: 15px; margin-bottom: 12px; }
+  .draft-note {
+    background: #fff8ec; border: 1px dashed var(--sun); border-radius: 12px;
+    padding: 14px 18px; font-size: 15px; color: var(--ink-soft); margin-bottom: 36px;
+  }
+  h2 { font-size: 22px; color: var(--sky-deep); margin: 34px 0 12px; }
+  p { margin-bottom: 14px; }
+  ul { margin: 0 0 14px 22px; }
+  li { margin-bottom: 7px; }
+  strong { color: var(--ink); }
+  .back { display: inline-block; margin-top: 40px; color: var(--sky-deep); font-weight: 600; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  footer { background: #ece5d8; padding: 30px 24px; text-align: center; color: var(--ink-soft); font-size: 15px; }
+  hr { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+</style>
+</head>
+<body class="fr">
+
+<header>
+  <a href="index.html" class="brand">
+    <span class="app-icon" aria-hidden="true">
+      <svg viewBox="0 0 1024 1024" width="100%" height="100%">
+        <rect width="1024" height="1024" rx="224" fill="#0a1520"/>
+        <line x1="60" y1="512" x2="964" y2="512" stroke="#1D9E75" stroke-width="6" opacity="0.15"/>
+        <polyline points="60,512 180,512 240,280 320,760 380,440 430,512 530,512 600,248 670,776 720,512 820,512 880,280 940,760 980,512" stroke="#1D9E75" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M980 468 C964 444, 934 440, 934 464 C934 484, 964 508, 980 528 C996 508, 1026 484, 1026 464 C1026 440, 996 444, 980 468Z" fill="#1D9E75"/>
+        <circle cx="962" cy="458" r="18" fill="white" opacity="0.35"/>
+      </svg>
+    </span>
+    <span><span class="lang-fr">Est-ce que ça va ?</span><span class="lang-en">Tell me you're ok</span></span>
+  </a>
+  <div class="lang-toggle">
+    <button id="btn-fr" class="active" onclick="setLang('fr')">FR</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<main>
+  <!-- ===== FRANÇAIS ===== -->
+  <div class="lang-fr">
+    <h1>Politique de confidentialité</h1>
+    <p class="dates">Date d'entrée en vigueur : 24 juin 2026<br>Dernière mise à jour : 24 juin 2026</p>
+    <div class="draft-note">⚠️ Document en cours de validation juridique. Cette politique sera finalisée avant le lancement public de l'application.</div>
+
+    <h2>Qui sommes-nous</h2>
+    <p>L'application « Est-ce que ça va ? » est exploitée par :</p>
+    <p><strong>Eric Saucier</strong><br>Responsable de la protection des renseignements personnels<br>Courriel : top20.extra@gmail.com</p>
+    <p>Pour toute question concernant vos renseignements personnels, ou pour exercer vos droits, vous pouvez communiquer avec la personne responsable ci-dessus.</p>
+
+    <h2>Renseignements que nous recueillons</h2>
+    <p>L'application recueille uniquement les renseignements nécessaires à son fonctionnement :</p>
+    <ul>
+      <li><strong>Identifiant anonyme</strong> généré automatiquement par Firebase (ne contient pas votre nom)</li>
+      <li><strong>Jeton de notification</strong> (FCM) permettant d'envoyer les notifications à votre appareil</li>
+      <li><strong>Votre nom</strong> (tel que vous le saisissez), affiché à vos proches et dans les messages d'alerte</li>
+      <li><strong>Numéros de téléphone et noms des contacts d'urgence</strong> que vous saisissez</li>
+      <li><strong>Heures de vérification</strong> que vous choisissez</li>
+      <li><strong>Position GPS</strong>, recueillie <strong>uniquement au moment d'une alerte d'urgence</strong>, jamais en continu</li>
+      <li><strong>Historique des vérifications</strong> (statuts « ça va », « besoin d'aide », rappels, alertes)</li>
+    </ul>
+    <p>Nous ne recueillons aucune donnée à des fins publicitaires et n'utilisons aucun outil de pistage.</p>
+
+    <h2>Pourquoi nous recueillons ces renseignements</h2>
+    <p>Ces renseignements servent exclusivement à :</p>
+    <ul>
+      <li>Envoyer les notifications de vérification quotidienne</li>
+      <li>Alerter vos contacts d'urgence si vous ne répondez pas</li>
+      <li>Afficher votre statut à vos proches que vous avez vous-même autorisés</li>
+      <li>Transmettre votre position à vos proches lors d'une alerte</li>
+    </ul>
+    <p>Vos renseignements ne sont jamais utilisés à d'autres fins.</p>
+
+    <h2>Géolocalisation</h2>
+    <p>Votre position GPS n'est recueillie <strong>qu'au moment précis où une alerte d'urgence est déclenchée</strong>, afin d'aider vos proches à vous localiser. Elle n'est jamais suivie de façon continue. Vous pouvez désactiver l'accès à la localisation à tout moment dans les réglages de votre téléphone ; dans ce cas, l'alerte sera quand même envoyée, mais sans votre position.</p>
+
+    <h2>Partage de vos renseignements</h2>
+    <p><strong>Nous ne vendons jamais vos renseignements personnels.</strong></p>
+    <p>Vos renseignements ne sont partagés qu'avec :</p>
+    <ul>
+      <li><strong>Les proches que vous avez vous-même invités</strong> au moyen de votre code d'invitation, qui peuvent voir votre statut et votre historique</li>
+      <li><strong>Vos contacts d'urgence</strong>, qui reçoivent une alerte (notification ou message texte) si vous ne répondez pas</li>
+    </ul>
+
+    <h2>Transfert de renseignements à l'extérieur du Québec</h2>
+    <p>Pour fonctionner, l'application utilise des fournisseurs de services situés aux États-Unis. Certains de vos renseignements sont donc traités à l'extérieur du Québec :</p>
+    <ul>
+      <li><strong>Google Firebase</strong> (hébergement des données et notifications) — données stockées sur des serveurs nord-américains</li>
+      <li><strong>Twilio</strong> (envoi des messages texte d'alerte) — votre numéro de contact d'urgence et le contenu du message d'alerte transitent par ce service américain</li>
+    </ul>
+    <p>Ces fournisseurs sont reconnus et appliquent des mesures de sécurité conformes aux normes de l'industrie. En utilisant l'application, vous êtes informé de ce transfert hors Québec.</p>
+
+    <h2>Durée de conservation</h2>
+    <ul>
+      <li>L'<strong>historique des vérifications</strong> est conservé pendant <strong>30 jours</strong>, puis supprimé automatiquement.</li>
+      <li>Les autres renseignements (nom, contacts, heures) sont conservés tant que votre compte est actif.</li>
+      <li>Si vous demandez la suppression de votre compte, l'ensemble de vos renseignements est supprimé dans un délai de 30 jours.</li>
+    </ul>
+
+    <h2>Vos droits</h2>
+    <p>Conformément à la Loi 25 (Québec), vous avez le droit de :</p>
+    <ul>
+      <li><strong>Accéder</strong> aux renseignements que nous détenons à votre sujet</li>
+      <li><strong>Faire corriger</strong> tout renseignement inexact ou incomplet</li>
+      <li><strong>Demander la suppression</strong> de votre compte et de vos renseignements</li>
+      <li><strong>Être informé</strong> de l'utilisation de vos renseignements</li>
+    </ul>
+    <p>Pour exercer l'un de ces droits, écrivez à <strong>top20.extra@gmail.com</strong>. Nous répondrons dans un délai de 30 jours.</p>
+
+    <h2>Sécurité</h2>
+    <p>Vos renseignements sont stockés de façon sécurisée sur Google Firebase. L'accès à vos renseignements est protégé et limité à votre usage et à celui des proches que vous avez autorisés.</p>
+
+    <h2>Modifications de cette politique</h2>
+    <p>Nous pouvons modifier cette politique. En cas de changement important, nous vous en aviserons par un moyen approprié (par exemple, une notification dans l'application). La date de dernière mise à jour figure en haut de cette page.</p>
+
+    <a href="index.html" class="back">← Retour à l'accueil</a>
+  </div>
+
+  <!-- ===== ENGLISH ===== -->
+  <div class="lang-en block">
+    <h1>Privacy Policy</h1>
+    <p class="dates">Effective date: June 24, 2026<br>Last updated: June 24, 2026</p>
+    <div class="draft-note">⚠️ Document under legal review. This policy will be finalized before the app's public launch.</div>
+
+    <h2>Who we are</h2>
+    <p>The "Tell me you're ok" app is operated by:</p>
+    <p><strong>Eric Saucier</strong><br>Person responsible for the protection of personal information<br>Email: top20.extra@gmail.com</p>
+    <p>For any question about your personal information, or to exercise your rights, you may contact the person responsible above.</p>
+
+    <h2>Information we collect</h2>
+    <p>The app collects only the information needed for it to work:</p>
+    <ul>
+      <li><strong>Anonymous identifier</strong> automatically generated by Firebase (does not contain your name)</li>
+      <li><strong>Notification token</strong> (FCM) used to send notifications to your device</li>
+      <li><strong>Your name</strong> (as you enter it), shown to your loved ones and in alert messages</li>
+      <li><strong>Phone numbers and names of emergency contacts</strong> you enter</li>
+      <li><strong>Check-in times</strong> you choose</li>
+      <li><strong>GPS location</strong>, collected <strong>only at the moment of an emergency alert</strong>, never continuously</li>
+      <li><strong>Check-in history</strong> (statuses: "I'm ok", "I need help", reminders, alerts)</li>
+    </ul>
+    <p>We do not collect any data for advertising and use no tracking tools.</p>
+
+    <h2>Why we collect this information</h2>
+    <p>This information is used solely to:</p>
+    <ul>
+      <li>Send daily check-in notifications</li>
+      <li>Alert your emergency contacts if you do not respond</li>
+      <li>Display your status to the loved ones you have authorized</li>
+      <li>Share your location with your loved ones during an alert</li>
+    </ul>
+    <p>Your information is never used for any other purpose.</p>
+
+    <h2>Location</h2>
+    <p>Your GPS location is collected <strong>only at the moment an emergency alert is triggered</strong>, to help your loved ones locate you. It is never tracked continuously. You can disable location access at any time in your phone settings; in that case, the alert is still sent, but without your location.</p>
+
+    <h2>Sharing your information</h2>
+    <p><strong>We never sell your personal information.</strong></p>
+    <p>Your information is shared only with:</p>
+    <ul>
+      <li><strong>The loved ones you have personally invited</strong> using your invitation code, who can see your status and history</li>
+      <li><strong>Your emergency contacts</strong>, who receive an alert (notification or text message) if you do not respond</li>
+    </ul>
+
+    <h2>Transfer of information outside Quebec</h2>
+    <p>To function, the app uses service providers located in the United States. Some of your information is therefore processed outside Quebec:</p>
+    <ul>
+      <li><strong>Google Firebase</strong> (data hosting and notifications) — data stored on North American servers</li>
+      <li><strong>Twilio</strong> (sending text message alerts) — your emergency contact number and the alert message content pass through this American service</li>
+    </ul>
+    <p>These providers are well-established and apply security measures that meet industry standards. By using the app, you are informed of this transfer outside Quebec.</p>
+
+    <h2>Retention period</h2>
+    <ul>
+      <li><strong>Check-in history</strong> is kept for <strong>30 days</strong>, then automatically deleted.</li>
+      <li>Other information (name, contacts, times) is kept as long as your account is active.</li>
+      <li>If you request deletion of your account, all your information is deleted within 30 days.</li>
+    </ul>
+
+    <h2>Your rights</h2>
+    <p>In accordance with Law 25 (Quebec), you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the information we hold about you</li>
+      <li><strong>Correct</strong> any inaccurate or incomplete information</li>
+      <li><strong>Request deletion</strong> of your account and your information</li>
+      <li><strong>Be informed</strong> about the use of your information</li>
+    </ul>
+    <p>To exercise any of these rights, write to <strong>top20.extra@gmail.com</strong>. We will respond within 30 days.</p>
+
+    <h2>Security</h2>
+    <p>Your information is stored securely on Google Firebase. Access to your information is protected and limited to your own use and that of the loved ones you have authorized.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may modify this policy. In the event of a significant change, we will notify you by an appropriate means (for example, a notification in the app). The last-updated date appears at the top of this page.</p>
+
+    <a href="index.html" class="back">← Back to home</a>
+  </div>
+</main>
+
+<footer>
+  <p><span class="lang-fr">© 2026 Est-ce que ça va ? — Cet outil ne remplace pas les services d'urgence (911).</span><span class="lang-en">© 2026 Tell me you're ok — This tool does not replace emergency services (911).</span></p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.body.className = lang;
+    document.documentElement.lang = lang;
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+</script>
+
+</body>
+</html>
