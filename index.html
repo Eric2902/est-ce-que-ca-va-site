@@ -128,6 +128,12 @@
 
   /* Timeline / escalation */
   .timeline-wrap { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 40px 32px; box-shadow: var(--shadow); }
+  .device-note {
+    max-width: 720px; margin: 22px auto 0; background: var(--sun-soft);
+    border-radius: var(--radius); padding: 18px 24px; display: flex; gap: 14px; align-items: flex-start;
+  }
+  .device-note .ic { font-size: 24px; flex-shrink: 0; line-height: 1.3; }
+  .device-note p { font-size: 17px; color: var(--ink); margin: 0; }
   .timeline { position: relative; padding-left: 38px; }
   .timeline::before {
     content: ""; position: absolute; left: 13px; top: 8px; bottom: 8px; width: 3px;
@@ -353,6 +359,13 @@
         <p><span class="lang-fr">Toujours pas de réponse ? Les proches reçoivent une notification, et le contact principal reçoit aussi un message texte.</span><span class="lang-en">Still no answer? Loved ones receive a notification, and the main contact also gets a text message.</span></p>
       </div>
     </div>
+  </div>
+  <div class="device-note">
+    <span class="ic" aria-hidden="true">📱</span>
+    <p>
+      <span class="lang-fr"><strong>Bon à savoir :</strong> une tablette convient pour les suivis quotidiens, mais pour qu'un appel d'urgence puisse être passé, il est préférable d'utiliser un téléphone (avec carte SIM).</span>
+      <span class="lang-en"><strong>Good to know:</strong> a tablet works well for daily check-ins, but to allow an emergency call to be placed, it's best to use a phone (with a SIM card).</span>
+    </p>
   </div>
 </section>
 
