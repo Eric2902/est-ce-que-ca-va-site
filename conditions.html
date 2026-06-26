@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions d'utilisation — Est-ce que ça va ?</title>
+<style>
+  :root {
+    --sky: #5b8a9e; --sky-deep: #3d6577; --sun: #e8a04b;
+    --cream: #faf6ef; --ink: #2b3338; --ink-soft: #5a666d;
+    --card: #ffffff; --line: #e4ddd1; --radius: 18px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink); background: var(--cream); line-height: 1.7; font-size: 18px;
+  }
+  .lang-en { display: none; }
+  body.en .lang-fr { display: none; }
+  body.en .lang-en { display: inline; }
+  body.en .lang-en.block { display: block; }
+
+  header {
+    background: rgba(250, 246, 239, 0.92); border-bottom: 1px solid var(--line);
+    padding: 14px 24px; display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 10px; position: sticky; top: 0; z-index: 10;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; color: var(--sky-deep); text-decoration: none; }
+  .brand .app-icon { width: 36px; height: 36px; border-radius: 9px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(10,21,32,0.25); }
+  .brand .app-icon svg { display: block; }
+  .lang-toggle { display: flex; border: 2px solid var(--sky); border-radius: 999px; overflow: hidden; }
+  .lang-toggle button { border: none; background: transparent; color: var(--sky-deep); padding: 6px 16px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .lang-toggle button.active { background: var(--sky); color: white; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-size: 32px; color: var(--sky-deep); margin-bottom: 8px; line-height: 1.2; }
+  .dates { color: var(--ink-soft); font-size: 15px; margin-bottom: 12px; }
+  .draft-note {
+    background: #fff8ec; border: 1px dashed var(--sun); border-radius: 12px;
+    padding: 14px 18px; font-size: 15px; color: var(--ink-soft); margin-bottom: 36px;
+  }
+  .important {
+    background: #fdeee9; border: 1px solid #e0a18f; border-radius: 12px;
+    padding: 18px 22px; margin: 20px 0; font-size: 17px;
+  }
+  .important strong { color: #c0492c; }
+  h2 { font-size: 22px; color: var(--sky-deep); margin: 34px 0 12px; }
+  p { margin-bottom: 14px; }
+  ul { margin: 0 0 14px 22px; }
+  li { margin-bottom: 7px; }
+  strong { color: var(--ink); }
+  .back { display: inline-block; margin-top: 40px; color: var(--sky-deep); font-weight: 600; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  footer { background: #ece5d8; padding: 30px 24px; text-align: center; color: var(--ink-soft); font-size: 15px; }
+</style>
+</head>
+<body class="fr">
+
+<header>
+  <a href="index.html" class="brand">
+    <span class="app-icon" aria-hidden="true">
+      <svg viewBox="0 0 1024 1024" width="100%" height="100%">
+        <rect width="1024" height="1024" rx="224" fill="#0a1520"/>
+        <line x1="60" y1="512" x2="964" y2="512" stroke="#1D9E75" stroke-width="6" opacity="0.15"/>
+        <polyline points="60,512 180,512 240,280 320,760 380,440 430,512 530,512 600,248 670,776 720,512 820,512 880,280 940,760 980,512" stroke="#1D9E75" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M980 468 C964 444, 934 440, 934 464 C934 484, 964 508, 980 528 C996 508, 1026 484, 1026 464 C1026 440, 996 444, 980 468Z" fill="#1D9E75"/>
+        <circle cx="962" cy="458" r="18" fill="white" opacity="0.35"/>
+      </svg>
+    </span>
+    <span><span class="lang-fr">Est-ce que ça va ?</span><span class="lang-en">Tell me you're ok</span></span>
+  </a>
+  <div class="lang-toggle">
+    <button id="btn-fr" class="active" onclick="setLang('fr')">FR</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<main>
+  <!-- ===== FRANÇAIS ===== -->
+  <div class="lang-fr">
+    <h1>Conditions d'utilisation</h1>
+    <p class="dates">Date d'entrée en vigueur : 24 juin 2026<br>Dernière mise à jour : 24 juin 2026</p>
+    <div class="draft-note">⚠️ Document en cours de validation juridique. Ces conditions seront finalisées avant le lancement public de l'application.</div>
+
+    <h2>1. Acceptation des conditions</h2>
+    <p>En téléchargeant, en installant ou en utilisant l'application « Est-ce que ça va ? » (l'« Application »), vous acceptez les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'Application.</p>
+
+    <h2>2. Description du service</h2>
+    <p>L'Application est un outil d'assistance qui envoie des notifications de vérification quotidienne à une personne (l'« usager ») et qui, en l'absence de réponse, avertit des proches désignés au moyen de notifications ou de messages texte. L'Application permet aussi à des proches autorisés de consulter le statut de l'usager.</p>
+
+    <div class="important">
+      <p><strong>⚠️ IMPORTANT — Ce que l'Application N'EST PAS</strong></p>
+      <p>L'Application est un outil d'assistance et de tranquillité d'esprit. Elle <strong>ne remplace pas les services d'urgence (911)</strong>, ni un service de surveillance médicale, de télésurveillance professionnelle ou de premiers secours. En cas d'urgence réelle, composez toujours le 911 ou les services d'urgence de votre région.</p>
+    </div>
+
+    <h2>3. Absence de garantie d'acheminement</h2>
+    <p>L'Application dépend de services tiers (notamment Google Firebase et Twilio), de la connexion Internet, du réseau cellulaire et du bon fonctionnement des appareils. Pour ces raisons, <strong>nous ne pouvons garantir que les notifications, rappels ou messages texte seront livrés, livrés à temps, ou reçus</strong>. Des pannes, retards, absences de réseau, appareils éteints ou autres facteurs hors de notre contrôle peuvent empêcher l'acheminement d'une alerte.</p>
+
+    <h2>4. Responsabilités de l'utilisateur</h2>
+    <ul>
+      <li>Fournir des renseignements exacts (nom, numéros de contacts d'urgence valides).</li>
+      <li>S'assurer que l'appareil est allumé, chargé, connecté et que les notifications sont autorisées.</li>
+      <li>Informer ses proches de leur rôle et obtenir leur accord.</li>
+      <li>Pour qu'un appel d'urgence puisse être passé, utiliser un appareil doté d'une fonction téléphonique (téléphone avec carte SIM). Une tablette sans carte SIM ne peut pas passer d'appel.</li>
+      <li>Ne pas utiliser l'Application comme unique moyen de sécurité.</li>
+    </ul>
+
+    <h2>5. Abonnement et tarification</h2>
+    <p>L'utilisation par un usager suivi requiert un abonnement de <strong>4,97 $ CAD par mois</strong>. L'utilisation par les proches (consultation du statut) est gratuite. Les abonnements sont gérés par la boutique d'applications (App Store ou Google Play) selon leurs conditions. Vous pouvez annuler à tout moment ; l'accès demeure actif jusqu'à la fin de la période payée.</p>
+
+    <h2>6. Limitation de responsabilité</h2>
+    <p>Dans toute la mesure permise par la loi, l'Application est fournie « telle quelle », sans garantie d'aucune sorte. Nous ne pourrons être tenus responsables des dommages directs, indirects, accessoires ou consécutifs résultant de l'utilisation ou de l'impossibilité d'utiliser l'Application, y compris en cas de non-acheminement d'une alerte, de retard, ou de panne de service. L'usager et ses proches reconnaissent et acceptent ces limites.</p>
+
+    <h2>7. Résiliation</h2>
+    <p>Vous pouvez cesser d'utiliser l'Application et supprimer votre compte à tout moment. Nous pouvons suspendre ou résilier l'accès en cas d'utilisation abusive ou contraire aux présentes conditions.</p>
+
+    <h2>8. Modifications des conditions</h2>
+    <p>Nous pouvons modifier ces conditions. En cas de changement important, nous vous en aviserons par un moyen approprié (par exemple, une notification dans l'Application). La poursuite de l'utilisation après modification vaut acceptation.</p>
+
+    <h2>9. Droit applicable</h2>
+    <p>Les présentes conditions sont régies par les lois applicables dans la province de Québec et au Canada. Tout litige sera soumis aux tribunaux compétents du Québec.</p>
+
+    <h2>10. Nous joindre</h2>
+    <p>Pour toute question concernant ces conditions :<br><strong>Eric Saucier</strong><br>top20.extra@gmail.com</p>
+
+    <a href="index.html" class="back">← Retour à l'accueil</a>
+  </div>
+
+  <!-- ===== ENGLISH ===== -->
+  <div class="lang-en block">
+    <h1>Terms of Use</h1>
+    <p class="dates">Effective date: June 24, 2026<br>Last updated: June 24, 2026</p>
+    <div class="draft-note">⚠️ Document under legal review. These terms will be finalized before the app's public launch.</div>
+
+    <h2>1. Acceptance of terms</h2>
+    <p>By downloading, installing or using the "Tell me you're ok" app (the "App"), you accept these terms of use. If you do not accept these terms, please do not use the App.</p>
+
+    <h2>2. Description of the service</h2>
+    <p>The App is an assistance tool that sends daily check-in notifications to a person (the "user") and, if no response is received, notifies designated loved ones through notifications or text messages. The App also allows authorized loved ones to view the user's status.</p>
+
+    <div class="important">
+      <p><strong>⚠️ IMPORTANT — What the App is NOT</strong></p>
+      <p>The App is an assistance and peace-of-mind tool. It <strong>does not replace emergency services (911)</strong>, nor a medical monitoring service, professional monitoring service, or first-response service. In a real emergency, always call 911 or your local emergency services.</p>
+    </div>
+
+    <h2>3. No guarantee of delivery</h2>
+    <p>The App relies on third-party services (notably Google Firebase and Twilio), on Internet connectivity, on the cellular network, and on devices working properly. For these reasons, <strong>we cannot guarantee that notifications, reminders or text messages will be delivered, delivered on time, or received</strong>. Outages, delays, lack of network, powered-off devices or other factors beyond our control may prevent an alert from being delivered.</p>
+
+    <h2>4. User responsibilities</h2>
+    <ul>
+      <li>Provide accurate information (name, valid emergency contact numbers).</li>
+      <li>Ensure the device is powered on, charged, connected and that notifications are allowed.</li>
+      <li>Inform loved ones of their role and obtain their agreement.</li>
+      <li>To allow an emergency call to be placed, use a device with phone capability (a phone with a SIM card). A tablet without a SIM card cannot place calls.</li>
+      <li>Do not use the App as the sole means of safety.</li>
+    </ul>
+
+    <h2>5. Subscription and pricing</h2>
+    <p>Use by a monitored user requires a subscription of <strong>CAD $4.97 per month</strong>. Use by loved ones (viewing status) is free. Subscriptions are managed by the app store (App Store or Google Play) under their terms. You may cancel at any time; access remains active until the end of the paid period.</p>
+
+    <h2>6. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, the App is provided "as is", without warranty of any kind. We shall not be liable for any direct, indirect, incidental or consequential damages arising from the use of, or inability to use, the App, including in the event of an undelivered alert, delay, or service outage. The user and their loved ones acknowledge and accept these limitations.</p>
+
+    <h2>7. Termination</h2>
+    <p>You may stop using the App and delete your account at any time. We may suspend or terminate access in the event of misuse or breach of these terms.</p>
+
+    <h2>8. Changes to the terms</h2>
+    <p>We may modify these terms. In the event of a significant change, we will notify you by an appropriate means (for example, a notification in the App). Continued use after a change constitutes acceptance.</p>
+
+    <h2>9. Governing law</h2>
+    <p>These terms are governed by the laws applicable in the province of Quebec and in Canada. Any dispute shall be submitted to the competent courts of Quebec.</p>
+
+    <h2>10. Contact us</h2>
+    <p>For any question about these terms:<br><strong>Eric Saucier</strong><br>top20.extra@gmail.com</p>
+
+    <a href="index.html" class="back">← Back to home</a>
+  </div>
+</main>
+
+<footer>
+  <p><span class="lang-fr">© 2026 Est-ce que ça va ? — Cet outil ne remplace pas les services d'urgence (911).</span><span class="lang-en">© 2026 Tell me you're ok — This tool does not replace emergency services (911).</span></p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.body.className = lang;
+    document.documentElement.lang = lang;
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+</script>
+
+</body>
+</html>
