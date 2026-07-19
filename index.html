@@ -154,6 +154,18 @@
   .tl-item h4 { font-size: 20px; margin: 2px 0 4px; }
   .tl-item p { color: var(--ink-soft); font-size: 17px; }
 
+  /* Section raton (mascotte) */
+  .raccoon-section {
+    max-width: 900px; margin: 0 auto; padding: 20px 24px 64px;
+    display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+  }
+  .raccoon-img { flex: 0 0 260px; max-width: 260px; }
+  .raccoon-img img { width: 100%; height: auto; display: block; }
+  .raccoon-text { flex: 1; min-width: 280px; }
+  .raccoon-text h2 { text-align: left; font-size: 29px; margin-bottom: 16px; }
+  .raccoon-text p { font-size: 18px; color: var(--ink-soft); margin-bottom: 14px; line-height: 1.7; }
+  .raccoon-text p:last-child { margin-bottom: 0; }
+
   /* Reassurance band */
   .band {
     background: var(--sky-deep); color: white; text-align: center;
@@ -213,6 +225,9 @@
     h2 { font-size: 27px; }
     .roles { grid-template-columns: 1fr; }
     .phones { grid-template-columns: 1fr; max-width: 280px; }
+    .raccoon-section { flex-direction: column; text-align: center; gap: 20px; }
+    .raccoon-text h2 { text-align: center; }
+    .raccoon-img { flex: 0 0 auto; max-width: 200px; margin: 0 auto; }
   }
 </style>
 </head>
@@ -365,6 +380,24 @@
     <p>
       <span class="lang-fr"><strong>Bon à savoir :</strong> une tablette convient pour les suivis quotidiens, mais pour qu'un appel d'urgence puisse être passé, il est préférable d'utiliser un téléphone (avec carte SIM).</span>
       <span class="lang-en"><strong>Good to know:</strong> a tablet works well for daily check-ins, but to allow an emergency call to be placed, it's best to use a phone (with a SIM card).</span>
+    </p>
+  </div>
+</section>
+
+<!-- MASCOTTE : POURQUOI UN RATON -->
+<section class="raccoon-section">
+  <div class="raccoon-img">
+    <img src="raton.png" alt="Le Veilleur, un raton laveur bienveillant tenant un cœur" width="260" height="260">
+  </div>
+  <div class="raccoon-text">
+    <h2><span class="lang-fr">Pourquoi un raton ?</span><span class="lang-en">Why a raccoon?</span></h2>
+    <p>
+      <span class="lang-fr">Regardez ses yeux. Toujours grands ouverts, attentifs, entourés de leur petit masque : le raton laveur est de ceux qui veillent. Pendant que le quartier s'endort, lui reste éveillé, discret, à l'affût du moindre bruit.</span>
+      <span class="lang-en">Look at its eyes. Always wide open, alert, framed by that little mask: the raccoon is one who watches over others. While the neighbourhood falls asleep, it stays awake, quiet, attentive to the slightest sound.</span>
+    </p>
+    <p>
+      <span class="lang-fr">C'est exactement l'esprit de notre application. Un gardien bienveillant qui prend des nouvelles chaque jour, sans jamais déranger. Une présence douce, ingénieuse et fidèle — bien de chez nous — qui veille sur ceux qu'on aime.</span>
+      <span class="lang-en">That's exactly the spirit of our app. A caring guardian that checks in every day, without ever intruding. A gentle, clever and faithful presence that watches over the people we love.</span>
     </p>
   </div>
 </section>
